@@ -15,7 +15,7 @@ library(ggplot2)
 ## Import data 
 ######################################################
 
-all_temp_sub = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Processed_temp_data/ALL_SITES_AST_sub.csv") ## daily max and min data
+all_temp_sub = read.csv("Processed_temp_data/ALL_SITES_AST_sub.csv") ## daily max and min data
 
 
 
@@ -166,7 +166,7 @@ diurnal_dynamic_metrics = diurnal_dynamic_metrics %>%
          r_squared_at >r2_threshold)
 
 
-write.csv(diurnal_dynamic_metrics, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/CSVs/diurnal_dynamic_metrics.csv")
+write.csv(diurnal_dynamic_metrics, "CSVs/diurnal_dynamic_metrics.csv")
 
 
 
@@ -222,7 +222,7 @@ for(i in 1:length(sites)) {
 View(diurnal_thermal_sensitivity_stats)
 
 
-write.csv(diurnal_thermal_sensitivity_stats, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/CSVs/diurnal_thermal_sensitivity_stats.csv")
+write.csv(diurnal_thermal_sensitivity_stats, "CSVs/diurnal_thermal_sensitivity_stats.csv")
 
 
 
@@ -231,7 +231,7 @@ write.csv(diurnal_thermal_sensitivity_stats, "C:/Users/gpeven/OneDrive - Univers
 
 diurnal_metrics = merge(diurnal_thermal_sensitivity_stats, diurnal_dynamic_metrics, by = c("site_id", "year", "count", "DOY"))
 
-write.csv(diurnal_metrics, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/CSVs/diurnal_ts_metrics.csv")
+write.csv(diurnal_metrics, "CSVs/diurnal_ts_metrics.csv")
 
 
 View(diurnal_metrics)
@@ -259,7 +259,7 @@ seasonal_diurnal_trends = seasonal_diurnal_trends %>% left_join(seasonal_metrics
 seasonal_diurnal_trends = seasonal_diurnal_trends %>% left_join(temp_seasonal, by = c("site_id", "year"))
 
 
-write.csv(seasonal_diurnal_trends, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/CSVs/seasonal_diurnal_trends.csv")
+write.csv(seasonal_diurnal_trends, "CSVs/seasonal_diurnal_trends.csv")
 
 
 
@@ -436,9 +436,9 @@ diurnal_metrics %>% filter(site_id %in% c("logan_E123"))%>%
 # View(poly_time_series)
 # 
 # 
-# write.csv(poly_time_series, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/CSVs/poly_time_series.csv")
+# write.csv(poly_time_series, "CSVs/poly_time_series.csv")
 # 
-# poly_time_series= read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/CSVs/poly_time_series.csv")
+# poly_time_series= read.csv("CSVs/poly_time_series.csv")
 # 
 # poly_time_series %>% filter(year == 2022)%>%
 # ggplot( aes(DOY, predicted_AmpRatio))+
@@ -454,7 +454,7 @@ diurnal_metrics %>% filter(site_id %in% c("logan_E123"))%>%
 # library(mgcv)
 # library(zoo)
 # 
-# diurnal_metrics= read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/CSVs/diurnal_ts_metrics.csv")
+# diurnal_metrics= read.csv("CSVs/diurnal_ts_metrics.csv")
 # 
 # 
 # # make unique list of years and sites for loop
@@ -543,7 +543,7 @@ diurnal_metrics %>% filter(site_id %in% c("logan_E123"))%>%
 # View(poly_time_series_all)
 # 
 # 
-# write.csv(poly_time_series_all, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/CSVs/poly_time_series_.csv")
+# write.csv(poly_time_series_all, "CSVs/poly_time_series_.csv")
 # 
 
 #########################################################################
@@ -559,7 +559,7 @@ diurnal_metrics %>% filter(site_id %in% c("logan_E123"))%>%
 # 
 # seasonal_diurnal_trends_all = seasonal_diurnal_trends_all %>% select(-mean_amp_ratio)
 # 
-# write.csv(seasonal_diurnal_trends_all, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/CSVs/general_diurnal_trends_all_years.csv")
+# write.csv(seasonal_diurnal_trends_all, "CSVs/general_diurnal_trends_all_years.csv")
 
 
   
