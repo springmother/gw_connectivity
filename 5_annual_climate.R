@@ -9,7 +9,7 @@ library(SPEI)
 ########################################################################
 # Air Temp and Precip Data - PRISM monthly
 
-precip_airtemp = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Climate/PRISM/PNF_ST_2017_2024_all_sites_ATEMP_PRECIP.csv")
+precip_airtemp = read.csv("Data/Climate/PRISM/PNF_ST_2017_2024_all_sites_ATEMP_PRECIP.csv")
 
 head(precip_airtemp)
 str(precip_airtemp)
@@ -143,7 +143,7 @@ annual_climate = left_join(SPEI_month, snowmelt_annual, by = c("year", "site_id_
 
 View(annual_climate)
 
-write.csv(annual_climate,"C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/CSVs/annual_climate.csv")
+write.csv(annual_climate,"CSVs/annual_climate.csv")
 
 
 
