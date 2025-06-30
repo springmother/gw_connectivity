@@ -31,7 +31,7 @@ diurnal_dynamic_metrics_streamside= diurnal_dynamic_metrics%>% filter(!site_id %
 diurnal_dynamic_metrics = rbind(diurnal_dynamic_metrics_compare, diurnal_dynamic_metrics_streamside)
 
 ### Read in LB lower air temp logger for 2024
-LB_air = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/clipped2024/Little_Buckhorn_Air_E378.csv")
+LB_air = read.csv("Temp_Data/PNF/clipped2024/Little_Buckhorn_Air_E378.csv")
 head(LB_air)
 
 
