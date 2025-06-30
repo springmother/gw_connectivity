@@ -61,7 +61,7 @@ snowmelt_methods = Snowmelt_runoff %>% filter(site_id_display =="Grouse" & Water
     axis.text.y = element_text(size = 9, color = "black"))
 
 snowmelt_methods
-ggsave(plot = snowmelt_methods, filename = "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/snowmelt_methods.tif", dpi = 500,height = 3.5, width = 6, units = "in" )
+ggsave(plot = snowmelt_methods, filename = "FIGURES/snowmelt_methods.tif", dpi = 500,height = 3.5, width = 6, units = "in" )
 
 
 
@@ -93,7 +93,7 @@ all_sites_boxplots = ggplot(diurnal_metrics, aes(factor(year), diurnal_AmpRatio,
 all_sites_boxplots
 
 
-ggsave(plot = all_sites_boxplots , filename = "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/all_sites_boxplots .tif", dpi = 500,height = 11, width = 10, units = "in" )
+ggsave(plot = all_sites_boxplots , filename = "FIGURES/all_sites_boxplots .tif", dpi = 500,height = 11, width = 10, units = "in" )
 
 
 
@@ -165,7 +165,7 @@ p_diel = ggplot(poly_time_series, aes(DOY)) +
 
 p_diel
 
-ggsave(plot = p_diel, filename = "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/diel_pl_ar.tif", dpi = 500,height = 7 , width = 8, units = "in" )
+ggsave(plot = p_diel, filename = "FIGURES/diel_pl_ar.tif", dpi = 500,height = 7 , width = 8, units = "in" )
 
 
 
@@ -242,7 +242,7 @@ ar_example = ( ar_2021 + ar_2022 ) +
   theme(legend.position = "bottom")
 
 
-ggsave(plot = ar_example, filename = "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/AR_time_series.tif", dpi = 500,height = 3.5 , width = 7, units = "in" )
+ggsave(plot = ar_example, filename = "FIGURES/AR_time_series.tif", dpi = 500,height = 3.5 , width = 7, units = "in" )
 
 
 
@@ -279,7 +279,7 @@ ar_21_23 = diurnal_metrics %>%
 
 ar_21_23
 
-ggsave(plot = ar_21_23, filename = "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/AR_21_23_all_streams.tif", dpi = 500,height = 4, width = 8, units = "in" )
+ggsave(plot = ar_21_23, filename = "FIGURES/AR_21_23_all_streams.tif", dpi = 500,height = 4, width = 8, units = "in" )
 
 
 
@@ -320,7 +320,7 @@ mt1 = ggplot(seasonal_diurnal_trends, aes(avg_AmpRatio, MaxTempC, color = factor
 
 
 
-ggsave(plot = mt1, filename = "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/maxtemp_ar.tif", dpi = 500,height = 5, width = 6, units = "in" )
+ggsave(plot = mt1, filename = "FIGURES/maxtemp_ar.tif", dpi = 500,height = 5, width = 6, units = "in" )
 
 
 
@@ -416,7 +416,7 @@ june_spei
 
 climate_all = grid.arrange(tot_runoff, snowmelt_rate, snowmelt_time, june_spei, ncol = 2)
 
-ggsave(plot = climate_all, filename ='C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/snowmelt_spei_all.tif',dpi = 500,height = 6 , width = 8, units = "in"  )
+ggsave(plot = climate_all, filename =FIGURES/snowmelt_spei_all.tif',dpi = 500,height = 6 , width = 8, units = "in"  )
 
 
 
@@ -463,9 +463,6 @@ p1 = ggplot(seasonal_diurnal_trends,aes(total_runoff_avg, avg_AmpRatio, group=si
     legend.position = "none")
 
 
-#ggsave(plot = p1, filename = "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/model_total_runoff_ar.tif", dpi = 500,height = 3.5 , width = 8, units = "in" )
-
-
 
 
 # melt rate
@@ -503,8 +500,6 @@ p2 = ggplot(seasonal_diurnal_trends,aes(melt_rate_to_90, avg_AmpRatio, group=sit
     legend.position = "none")
 
 
-#ggsave(plot = p2, filename = "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/model_melt_rate_ar.tif", dpi = 500,height = 3.5 , width = 8, units = "in" )
-
 
 
 
@@ -540,8 +535,6 @@ p3 = ggplot(seasonal_diurnal_trends,aes(June_SPEI_3month, avg_AmpRatio, group=si
     title = element_text(size = 11, color = "black"),
     strip.text = element_text(size = 10, face = "bold", color = "black"),
     legend.position = "none")
-
-#ggsave(plot = p3, filename = "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/model_spei_ar.tif", dpi = 500,height = 3.5 , width = 8, units = "in" )
 
 
 
@@ -582,7 +575,7 @@ p4 = ggplot(seasonal_diurnal_trends,aes(DOY_90_pct_runoff, avg_AmpRatio, group=s
 
 combo = grid.arrange(p1, p2, p3, p4, ncol = 2)
 
-ggsave(plot = combo, filename = "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/model_results_ar.tif", dpi = 500,height = 6 , width = 8.5, units = "in" )
+ggsave(plot = combo, filename = "FIGURES/model_results_ar.tif", dpi = 500,height = 6 , width = 8.5, units = "in" )
 
 
 
@@ -615,7 +608,7 @@ July_air_compare = LB_air_compare %>%
     legend.text = element_text( size = 10, color = "black"))
 
 
-ggsave(plot = July_air_compare, filename ='C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/appendix_july_air_compare.tif',dpi = 500,height = 6 , width = 6, units = "in"  )
+ggsave(plot = July_air_compare, filename ='Stream_Temp/FIGURES/appendix_july_air_compare.tif',dpi = 500,height = 6 , width = 6, units = "in"  )
 
 
 ## Seasonal
@@ -641,7 +634,7 @@ seasonal_air_compare = LB_air_compare %>% filter(DOY %in% 175:250)%>%
     legend.text = element_text( size = 10, color = "black"))
 
 
-ggsave(plot = seasonal_air_compare, filename ='C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/appendix_seasonal_air_compare.tif',dpi = 500,height = 6 , width = 8, units = "in"  )
+ggsave(plot = seasonal_air_compare, filename ='Stream_Temp/FIGURES/appendix_seasonal_air_compare.tif',dpi = 500,height = 6 , width = 8, units = "in"  )
 
 ## Compare all sites
 
@@ -665,455 +658,7 @@ appendix_all_sites = diurnal_dynamic_metrics %>% filter(DOY %in% 175:250)%>%
     legend.position = "bottom",
     legend.text = element_text( size = 10, color = "black"))
 
-ggsave(plot = appendix_all_sites, filename ='C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/appendix_all_sites.tif',dpi = 500,height = 6 , width = 8, units = "in"  )
+ggsave(plot = appendix_all_sites, filename ='Stream_Temp/FIGURES/appendix_all_sites.tif',dpi = 500,height = 6 , width = 8, units = "in"  )
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# #############################################################################
-# ## Old Graphs for Paper
-# 
-# # total runoff
-# g1 = ggplot(seasonal_diurnal_trends, aes(x = total_runoff_avg, y = avg_AmpRatio, color = hydro_category)) +
-#   geom_point() +
-#   scale_color_manual(values = c("Groundwater" = "cadetblue3", "Atmospheric" = "salmon3", "Variable" = "darkolivegreen3"))+
-#   geom_smooth(method = "lm", se = FALSE, lwd = 1.5) +
-#   theme_bw()+
-#   theme(
-#     axis.title.y = element_text(color = "black", size = 11),
-#     legend.position = "none", 
-#     axis.text.x = element_text(size = 11, color = "black"), 
-#     axis.title.x = element_text(size = 11, color = "black"),
-#     axis.text.y = element_text(size = 11, color = "black"))+
-#   xlab("Average Total Annual Runoff (meters)")+
-#   ylab("")
-# 
-# # melt rate
-# g2 = ggplot(seasonal_diurnal_trends, aes(x = melt_rate_avg, y = avg_AmpRatio, color = hydro_category)) +
-#   geom_point() +
-#   scale_color_manual(values = c("Groundwater" = "cadetblue3", "Atmospheric" = "salmon3", "Variable" = "darkolivegreen3"))+
-#   geom_smooth(method = "lm", se = FALSE, lwd = 1.5) +
-#   theme_bw()+
-#   ylab("Average Diurnal Amplitude Ratio")+
-#   xlab("Average Snowmelt Rate (meters/day)")+
-#   theme(
-#     axis.title.y = element_text(color = "black", size = 11),
-#     legend.position = "none", 
-#     axis.text.x = element_text(size = 11, color = "black"), 
-#     axis.title.x = element_text(size = 11, color = "black"),
-#     axis.text.y = element_text(size = 11, color = "black"))
-# 
-# # spei
-# g3 = ggplot(seasonal_diurnal_trends, aes(x = June_SPEI_3month, y = avg_AmpRatio, color = hydro_category)) +
-#   geom_point() +
-#   scale_color_manual(values = c("Groundwater" = "cadetblue3", "Atmospheric" = "salmon3", "Variable" = "darkolivegreen3"))+
-#   geom_smooth(method = "lm", se = FALSE, lwd = 1.5) +
-#   theme_bw()+
-#   ylab("")+
-#   labs(color = "Hydrologic Category")+
-#   xlab("Spring SPEI (April - June)")+
-#   theme(
-#     axis.title.y = element_text(color = "black", size = 11),
-#     legend.position = "bottom", 
-#     axis.text.x = element_text(size = 11, color = "black"), 
-#     axis.title.x = element_text(size = 11, color = "black"),
-#     axis.text.y = element_text(size = 11, color = "black"))
-# 
-# 
-# grid = grid.arrange(g1, g2, g3, nrow = 3)
-# 
-# 
-# ggsave(plot = grid, filename ='C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/corr_grid.tif',dpi = 500,height = 7 , width = 8, units = "in"  )
-# 
-
-
-
-
-
-
-
-### GAM fit
-
-# p_diel = ggplot(Diel_dynamic_metrics, aes(DOY)) +
-#   
-#   geom_point(aes(y = diurnal_phase_lag, shape = "Phase Lag"), size = .5, color = "black") + 
-#   geom_point(aes(y = diurnal_AmpRatio * 10, shape = "Diurnal amplitude ratio"), 
-#              size = 0.5, color = "black") +  
-#   
-#   geom_smooth(aes(y = diurnal_AmpRatio* 10, color = "Diurnal amplitude ratio"), se = FALSE, size = 1.5)+
-#   geom_smooth(aes(y = diurnal_phase_lag, color = "Phase Lag"), ,se = FALSE, size = 1.5)+
-#   
-#   facet_wrap(~site_id, nrow = 4, ncol = 3) +
-#   theme_bw() +
-#   ylab("Diurnal phase lag (hours)") +
-#   xlab("Day of year") +
-#   scale_color_manual(name = "", values = c("Phase Lag" = "hotpink3", 
-#                                            "Diurnal amplitude ratio" = "springgreen4"))+
-#   scale_y_continuous(limits = c(0,5),
-#                      sec.axis = sec_axis(~ . / 10, name = "Diurnal amplitude ratio",
-#                                          breaks = seq(0, 0.5, by = 0.1))
-#   ) +
-#   
-#   guides(color = guide_legend(override.aes = list(linetype = c(1,1), size = c(1,1))),
-#          shape = guide_legend(override.aes = list(size = c(3,3)))) +  
-#   scale_shape_manual(name = "", 
-#                      values = c("Phase Lag" = 19, 
-#                                 "Diurnal amplitude ratio" = 2)) + 
-#   
-#   theme( 
-#     axis.title.x = element_text(size = 12, color = "black"), 
-#     axis.title.y = element_text(size = 12, color = "black"), 
-#     axis.text.x = element_text(size = 10, color = "black", angle = 45, hjust = 1),
-#     axis.text.y = element_text(size = 10, color = "black"), 
-#     title = element_text(size = 12, color = "black"),
-#     legend.position = "bottom", 
-#     legend.text = element_text( size = 10, color = "black"))
-# 
-# ggsave(plot = p_diel, filename = "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/diel_pl_ar.tif", dpi = 500,height = 7 , width = 8, units = "in" )
-# 
-
-
-#######################################################################3
-## Calculating IQR for figure below
-
-# diurnal_summary <- diurnal_dynamic_metrics %>%
-#   group_by(DOY, year) %>%
-#   summarise(
-#     q25_phase = quantile(diurnal_phase_lag, 0.25, na.rm = TRUE),
-#     q75_phase = quantile(diurnal_phase_lag, 0.75, na.rm = TRUE),
-#     q25_amp = quantile(diurnal_AmpRatio, 0.25, na.rm = TRUE),
-#     q75_amp = quantile(diurnal_AmpRatio, 0.75, na.rm = TRUE)
-#   )
-# 
-# 
-# ##########################################################################
-# ## All sites combined
-# p_diel2 = ggplot() + 
-#   # Grey background for IQR (Phase Lag)
-#   geom_ribbon(data = diurnal_summary, aes(x = DOY, ymin = q25_phase, ymax = q75_phase), 
-#               fill = "grey70", alpha = 0.5) +
-#   
-#   geom_ribbon(data = diurnal_summary, aes(x = DOY, ymin = q25_amp * 10, ymax = q75_amp * 10), 
-#               fill = "grey70", alpha = 0.5) +
-#   
-#   geom_smooth(data = poly_time_series, aes(x = DOY, y = predicted_AmpRatio * 10, color = "Diurnal Amplitude Ratio"), method = "lm", formula = y ~ poly(x, 2),se = FALSE, size = 1.5) +
-#   geom_smooth(data = poly_time_series, aes(x = DOY, y = predicted_PL, color = "Phase Lag"), se = FALSE, method = "lm", formula = y ~ poly(x, 2),size = 1.5) +
-#   
-#   theme_bw() +
-#   ylab("Diurnal Phase Lag (hours)") +
-#   xlab("Day of Year") +
-#   
-#   facet_wrap(~year, ncol = 2, nrow = 4) +
-#   
-#   scale_y_continuous(limits = c(0,5),
-#                      sec.axis = sec_axis(~ . / 10, name = "Diurnal Amplitude Ratio",
-#                                          breaks = seq(0, 0.5, by = 0.1))) +
-#   
-#   scale_color_manual(name = "", values = c("Phase Lag" = "hotpink3", 
-#                                            "Diurnal Amplitude Ratio" = "springgreen4"))+
-#   
-#   
-#   theme( 
-#     axis.title.x = element_text(size = 12, color = "black"), 
-#     axis.title.y = element_text(size = 12, color = "black"), 
-#     axis.text.x = element_text(size = 10, color = "black", angle = 45, hjust = 1),
-#     axis.text.y = element_text(size = 10, color = "black"), 
-#     title = element_text(size = 12, color = "black"),
-#     legend.position = "bottom", 
-#     legend.text = element_text(size = 10, color = "black"))
-# 
-# p_diel2
-# 
-# 
-# ggsave(plot = p_diel2, filename = "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/diel_pl_ar_all_streams.tif", dpi = 500,height = 7 , width = 5, units = "in" )
-# 
-# # 
-# ###################################################
-# ## example site in each year
-# # grouse = gw signal
-# # logan = no gw signal
-# poly_time_series$year = as.factor(poly_time_series$year)
-# 
-# 
-# grouse_diel_main = poly_time_series%>% filter(site_id == "grouse_E062"& year %in% c(2021, 2022, 2023, 2024))
-# 
-# 
-# grouse_diel = ggplot(grouse_diel_main, aes(DOY)) +
-#   
-#   geom_point(aes(y = diurnal_phase_lag, shape = "Phase Lag"), size = .5, color = "black") + 
-#   geom_point(aes(y = diurnal_AmpRatio * 10, shape = "Diurnal amplitude ratio"), 
-#              size = 0.5, color = "black") +  
-#   
-#   geom_smooth(aes(y = predicted_AmpRatio* 10, color = "Diurnal amplitude ratio"), method = "lm", formula = y ~ poly(x, 2),  se = FALSE, size = 1.5)+
-#   geom_smooth(aes(y = predicted_PL, color = "Phase Lag"), method = "lm", formula = y ~ poly(x, 2),se = FALSE, size = 1.5)+
-#   #facet_wrap(~year, ncol = 2, nrow = 4) +
-#   theme_bw() +
-#   ylab("Diurnal phase lag (hours)") +
-#   xlab("Day of year") +
-#   scale_color_manual(name = "", values = c("Phase Lag" = "hotpink3", 
-#                                            "Diurnal amplitude ratio" = "springgreen4"))+
-#   scale_y_continuous(limits = c(0,5),
-#                      sec.axis = sec_axis(~ . / 10, name = "Diurnal amplitude ratio",
-#                                          breaks = seq(0, 0.5, by = 0.1))
-#   ) +
-#   
-#   guides(color = guide_legend(override.aes = list(linetype = c(1,1), size = c(1,1))),
-#          shape = guide_legend(override.aes = list(size = c(3,3)))) +  
-#   scale_shape_manual(name = "", 
-#                      values = c("Phase Lag" = 19, 
-#                                 "Diurnal amplitude ratio" = 2)) + 
-#   
-#   theme( 
-#     axis.title.x = element_text(size = 12, color = "black"), 
-#     axis.title.y = element_text(size = 12, color = "black"), 
-#     axis.text.x = element_text(size = 10, color = "black", angle = 45, hjust = 1),
-#     axis.text.y = element_text(size = 10, color = "black"), 
-#     title = element_text(size = 12, color = "black"),
-#     legend.position = "bottom", 
-#     legend.text = element_text( size = 10, color = "black"))+
-#   ggtitle("(a) Grouse (E062)") +
-#   facet_wrap(~year, ncol = 2, nrow = 4)
-# 
-# grouse_diel
-# 
-# ggsave(plot = grouse_diel, filename = "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/grouse_diel_pl_ar.tif", dpi = 500,height = 7 , width = 5, units = "in" )
-# 
-# 
-# 
-# ### diurnal amp ratio with year in same graph
-# 
-# # include all years
-# grouse_diel_main = poly_time_series%>% filter(site_id == "grouse_E062")
-# 
-# 
-# ggplot(grouse_diel_main, aes(DOY, color = factor(year))) +
-#   
-#   geom_smooth(aes(y = predicted_AmpRatio, color = factor(year)), method = "lm", formula = y ~ poly(x, 2),  se = FALSE, size = 1.5)+
-#   
-#   theme_bw()+
-#   ylim(0.1, 0.4)
-# 
-# #########################################################################
-# 
-# logan_diel_main = poly_time_series%>% filter(site_id == "logan_E123" & year %in% c(2021, 2022, 2023, 2024))
-# 
-# 
-# logan_diel = ggplot(logan_diel_main, aes(DOY)) +
-#   
-#   geom_point(aes(y = diurnal_phase_lag, shape = "Phase Lag"), size = .5, color = "black") + 
-#   geom_point(aes(y = diurnal_AmpRatio * 10, shape = "Diurnal amplitude ratio"), 
-#              size = 0.5, color = "black") +  
-#   
-#   geom_smooth(aes(y = predicted_AmpRatio* 10, color = "Diurnal amplitude ratio"), method = "lm", formula = y ~ poly(x, 2),  se = FALSE, size = 1.5)+
-#   geom_smooth(aes(y = predicted_PL, color = "Phase Lag"), method = "lm", formula = y ~ poly(x, 2),se = FALSE, size = 1.5)+
-#   facet_wrap(~year, ncol = 2, nrow = 4) +
-#   theme_bw() +
-#   ylab("Diurnal phase lag (hours)") +
-#   xlab("Day of year") +
-#   scale_color_manual(name = "", values = c("Phase Lag" = "hotpink3", 
-#                                            "Diurnal amplitude ratio" = "springgreen4"))+
-#   scale_y_continuous(limits = c(0,5),
-#                      sec.axis = sec_axis(~ . / 10, name = "Diurnal amplitude ratio",
-#                                          breaks = seq(0, 0.5, by = 0.1))
-#   ) +
-#   
-#   guides(color = guide_legend(override.aes = list(linetype = c(1,1), size = c(1,1))),
-#          shape = guide_legend(override.aes = list(size = c(3,3)))) +  
-#   scale_shape_manual(name = "", 
-#                      values = c("Phase Lag" = 19, 
-#                                 "Diurnal amplitude ratio" = 2)) + 
-#   
-#   theme( 
-#     axis.title.x = element_text(size = 12, color = "black"), 
-#     axis.title.y = element_text(size = 12, color = "black"), 
-#     axis.text.x = element_text(size = 10, color = "black", angle = 45, hjust = 1),
-#     axis.text.y = element_text(size = 10, color = "black"), 
-#     title = element_text(size = 12, color = "black"),
-#     legend.position = "bottom", 
-#     legend.text = element_text( size = 10, color = "black"))+
-#   ggtitle("(b) Logan (E109)")
-# 
-# logan_diel
-# 
-# ggsave(plot = logan_diel, filename = "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/logan_diel_pl_ar.tif", dpi = 500,height = 7 , width = 5, units = "in" )
-# 
-# 
-# #########################################################################
-# diel_logan_grouse = grid.arrange(grouse_diel, logan_diel, ncol = 2)
-# 
-# ggsave(plot = diel_logan_grouse, filename = "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/FIGURES/grouse_logan_diel_pl_ar.tif", dpi = 500,height = 6 , width = 8, units = "in" )
-# 
-# 
-# 
-# #####################################################################
-# # mckorkle
-# 
-# mckorkle_diel_main = poly_time_series%>% filter(site_id == "mckorkle_E118")
-# 
-# 
-# mckorkle_diel = ggplot(mckorkle_diel_main, aes(DOY)) +
-#   
-#   geom_point(aes(y = diurnal_phase_lag, shape = "Phase Lag"), size = .5, color = "black") + 
-#   geom_point(aes(y = diurnal_AmpRatio * 10, shape = "Diurnal amplitude ratio"), 
-#              size = 0.5, color = "black") +  
-#   
-#   geom_smooth(aes(y = predicted_AmpRatio* 10, color = "Diurnal amplitude ratio"), method = "lm", formula = y ~ poly(x, 2),  se = FALSE, size = 1.5)+
-#   geom_smooth(aes(y = predicted_PL, color = "Phase Lag"), method = "lm", formula = y ~ poly(x, 2),se = FALSE, size = 1.5)+
-#   facet_wrap(~year, ncol = 2, nrow = 4) +
-#   theme_bw() +
-#   ylab("Diurnal phase lag (hours)") +
-#   xlab("Day of year") +
-#   scale_color_manual(name = "", values = c("Phase Lag" = "hotpink3", 
-#                                            "Diurnal amplitude ratio" = "springgreen4"))+
-#   scale_y_continuous(limits = c(0,5),
-#                      sec.axis = sec_axis(~ . / 10, name = "Diurnal amplitude ratio",
-#                                          breaks = seq(0, 0.5, by = 0.1))
-#   ) +
-#   
-#   guides(color = guide_legend(override.aes = list(linetype = c(1,1), size = c(1,1))),
-#          shape = guide_legend(override.aes = list(size = c(3,3)))) +  
-#   scale_shape_manual(name = "", 
-#                      values = c("Phase Lag" = 19, 
-#                                 "Diurnal amplitude ratio" = 2)) + 
-#   
-#   theme( 
-#     axis.title.x = element_text(size = 12, color = "black"), 
-#     axis.title.y = element_text(size = 12, color = "black"), 
-#     axis.text.x = element_text(size = 10, color = "black", angle = 45, hjust = 1),
-#     axis.text.y = element_text(size = 10, color = "black"), 
-#     title = element_text(size = 12, color = "black"),
-#     legend.position = "bottom", 
-#     legend.text = element_text( size = 10, color = "black"))+
-#   ggtitle("(b) mckorkle (E118)")
-# 
-# mckorkle_diel
-# 
-# 
-# 
-# 
-# #####################################################
-# ## warren
-# 
-# warren_diel_main = diurnal_dynamic_metrics%>% filter(site_id == "warren_E162")
-# 
-# 
-# warren_diel = ggplot() + 
-#   
-#   geom_smooth(data = warren_diel_main, aes(x = DOY, y = diurnal_AmpRatio * 10, color = "Diurnal Amplitude Ratio"), se = FALSE, size = 1.5) +
-#   geom_smooth(data = warren_diel_main, aes(x = DOY, y = diurnal_phase_lag, color = "Phase Lag"), se = FALSE, size = 1.5) +
-#   
-#   theme_bw() +
-#   ylab("Diurnal Phase Lag (hours)") +
-#   xlab("Day of Year") +
-#   
-#   facet_wrap(~year, ncol = 2, nrow = 4) +
-#   
-#   scale_y_continuous(limits = c(0,6),
-#                      sec.axis = sec_axis(~ . / 10, name = "Diurnal Amplitude Ratio",
-#                                          breaks = seq(0, 0.5, by = 0.1))) +
-#   
-#   scale_color_manual(name = "", values = c("Phase Lag" = "hotpink3", 
-#                                            "Diurnal Amplitude Ratio" = "springgreen4"))+
-#   
-#   
-#   theme( 
-#     axis.title.x = element_text(size = 12, color = "black"), 
-#     axis.title.y = element_text(size = 12, color = "black"), 
-#     axis.text.x = element_text(size = 10, color = "black", angle = 45, hjust = 1),
-#     axis.text.y = element_text(size = 10, color = "black"), 
-#     title = element_text(size = 12, color = "black"),
-#     legend.position = "bottom", 
-#     legend.text = element_text(size = 10, color = "black"))+
-#   ggtitle("Warren (E162)")
-# 
-# warren_diel
-# 
-# 
-# 
-# ##### government
-# 
-# government_diel_main = diurnal_dynamic_metrics%>% filter(site_id == "government_E323")
-# 
-# 
-# government_diel = ggplot() + 
-#   
-#   geom_smooth(data = government_diel_main, aes(x = DOY, y = diurnal_AmpRatio * 10, color = "Diurnal Amplitude Ratio"), se = FALSE, size = 1.5) +
-#   geom_smooth(data = government_diel_main, aes(x = DOY, y = diurnal_phase_lag, color = "Phase Lag"), se = FALSE, size = 1.5) +
-#   
-#   theme_bw() +
-#   ylab("Diurnal Phase Lag (hours)") +
-#   xlab("Day of Year") +
-#   
-#   facet_wrap(~year, ncol = 2, nrow = 4) +
-#   
-#   scale_y_continuous(limits = c(0,6),
-#                      sec.axis = sec_axis(~ . / 10, name = "Diurnal Amplitude Ratio",
-#                                          breaks = seq(0, 0.5, by = 0.1))) +
-#   
-#   scale_color_manual(name = "", values = c("Phase Lag" = "hotpink3", 
-#                                            "Diurnal Amplitude Ratio" = "springgreen4"))+
-#   
-#   
-#   theme( 
-#     axis.title.x = element_text(size = 12, color = "black"), 
-#     axis.title.y = element_text(size = 12, color = "black"), 
-#     axis.text.x = element_text(size = 10, color = "black", angle = 45, hjust = 1),
-#     axis.text.y = element_text(size = 10, color = "black"), 
-#     title = element_text(size = 12, color = "black"),
-#     legend.position = "bottom", 
-#     legend.text = element_text(size = 10, color = "black"))+
-#   ggtitle("government (E323)")
-# 
-# government_diel
-# 
-# 
-# ##### lake
-# 
-# lake_diel_main = diurnal_dynamic_metrics%>% filter(site_id == "lake_E035")
-# 
-# 
-# lake_diel = ggplot() + 
-#   
-#   geom_smooth(data = lake_diel_main, aes(x = DOY, y = diurnal_AmpRatio * 10, color = "Diurnal Amplitude Ratio"), se = FALSE, size = 1.5) +
-#   geom_smooth(data = lake_diel_main, aes(x = DOY, y = diurnal_phase_lag, color = "Phase Lag"), se = FALSE, size = 1.5) +
-#   
-#   theme_bw() +
-#   ylab("Diurnal Phase Lag (hours)") +
-#   xlab("Day of Year") +
-#   
-#   facet_wrap(~year, ncol = 2, nrow = 4) +
-#   
-#   scale_y_continuous(limits = c(0,6),
-#                      sec.axis = sec_axis(~ . / 10, name = "Diurnal Amplitude Ratio",
-#                                          breaks = seq(0, 0.5, by = 0.1))) +
-#   
-#   scale_color_manual(name = "", values = c("Phase Lag" = "hotpink3", 
-#                                            "Diurnal Amplitude Ratio" = "springgreen4"))+
-#   
-#   
-#   theme( 
-#     axis.title.x = element_text(size = 12, color = "black"), 
-#     axis.title.y = element_text(size = 12, color = "black"), 
-#     axis.text.x = element_text(size = 10, color = "black", angle = 45, hjust = 1),
-#     axis.text.y = element_text(size = 10, color = "black"), 
-#     title = element_text(size = 12, color = "black"),
-#     legend.position = "bottom", 
-#     legend.text = element_text(size = 10, color = "black"))+
-#   ggtitle("lake")
-# 
-# lake_diel
-# 
-# 
 
