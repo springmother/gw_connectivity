@@ -31,7 +31,7 @@ library(zoo)
 #######################
 ## LODGEPOLE RAWS
 
-lodgepole_at = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Climate/Air_Temp/WRCC_Lodgepole_RAWS_Data_prepped.csv")
+lodgepole_at = read.csv("/WRCC_Lodgepole_RAWS_Data_prepped.csv")
 
 lodgepole_at <- lodgepole_at %>%
   mutate(AirTempC = ifelse(AirTempC == "M", "", AirTempC))
@@ -61,7 +61,7 @@ lodgepole_at <- lodgepole_at[, c("TimeofDay", "DOY", "Year", "AirTempC")]
 ########################
 ## TEAPOT RAWS
 
-teapot_at = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Climate/Air_Temp/WRCC_TeaPot_RAWS_Data_prepped.csv")
+teapot_at = read.csv("/WRCC_TeaPot_RAWS_Data_prepped.csv")
 
 teapot_at <- teapot_at %>%
   mutate(AirTempC = ifelse(AirTempC == "M", "", AirTempC))
@@ -90,13 +90,13 @@ teapot_at <- teapot_at[, c("TimeofDay", "DOY", "Year", "AirTempC")]
 ##########################
 ## Warren Air temp (E343)
 
-warren_at_2017 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Warren_E162/air_temp/2017.csv", fileEncoding = "Latin1")
-warren_at_2019 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Warren_E162/air_temp/2019.csv")
-warren_at_2020 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Warren_E162/air_temp/2020.csv")
-warren_at_2021 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Warren_E162/air_temp/2021.csv")
-warren_at_2022 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Warren_E162/air_temp/2022.csv")
-warren_at_2023 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Warren_E162/air_temp/2023.csv")
-warren_at_2024 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Warren_E162/air_temp/2024.csv")
+warren_at_2017 = read.csv("Warren_E162/air_temp/2017.csv", fileEncoding = "Latin1")
+warren_at_2019 = read.csv("Warren_E162/air_temp/2019.csv")
+warren_at_2020 = read.csv("Warren_E162/air_temp/2020.csv")
+warren_at_2021 = read.csv("Warren_E162/air_temp/2021.csv")
+warren_at_2022 = read.csv("Warren_E162/air_temp/2022.csv")
+warren_at_2023 = read.csv("Warren_E162/air_temp/2023.csv")
+warren_at_2024 = read.csv("Warren_E162/air_temp/2024.csv")
 
 warren_at_sub = rbind(warren_at_2017, warren_at_2019, warren_at_2020, warren_at_2021, warren_at_2022, warren_at_2023, warren_at_2024)
 
@@ -131,13 +131,13 @@ warren_at_sub = warren_at_sub %>% drop_na(Year)
 ## McKorkle Air temp (E341)
 
 
-mckorkle_at_2018 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/McCorkle_E118/air_temp/2018.csv", fileEncoding = "Latin1")
-mckorkle_at_2019 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/McCorkle_E118/air_temp/2019.csv")
-mckorkle_at_2020 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/McCorkle_E118/air_temp/2020.csv")
-mckorkle_at_2021 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/McCorkle_E118/air_temp/2021.csv")
-mckorkle_at_2022 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/McCorkle_E118/air_temp/2022.csv")
-mckorkle_at_2023 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/McCorkle_E118/air_temp/2023.csv")
-mckorkle_at_2024 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/McCorkle_E118/air_temp/2024.csv")
+mckorkle_at_2018 = read.csv("McCorkle_E118/air_temp/2018.csv", fileEncoding = "Latin1")
+mckorkle_at_2019 = read.csv("McCorkle_E118/air_temp/2019.csv")
+mckorkle_at_2020 = read.csv("McCorkle_E118/air_temp/2020.csv")
+mckorkle_at_2021 = read.csv("McCorkle_E118/air_temp/2021.csv")
+mckorkle_at_2022 = read.csv("McCorkle_E118/air_temp/2022.csv")
+mckorkle_at_2023 = read.csv("McCorkle_E118/air_temp/2023.csv")
+mckorkle_at_2024 = read.csv("McCorkle_E118/air_temp/2024.csv")
 
 mckorkle_at_sub = rbind(mckorkle_at_2018, mckorkle_at_2019, mckorkle_at_2020, mckorkle_at_2021, mckorkle_at_2022, mckorkle_at_2023, mckorkle_at_2024)
 
@@ -169,12 +169,12 @@ mckorkle_at_sub = mckorkle_at_sub %>% drop_na(Year)
 ############################
 ## Lake Cr Air temp (E342)
 
-lake_at_2017 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Lake_E035/air_temp/2017.csv", fileEncoding = "Latin1")
-lake_at_2018 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Lake_E035/air_temp/2018.csv", fileEncoding = "Latin1")
-lake_at_2021 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Lake_E035/air_temp/2021.csv")
-lake_at_2022 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Lake_E035/air_temp/2022.csv")
-lake_at_2023 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Lake_E035/air_temp/2023.csv", fileEncoding = "Latin1")
-lake_at_2024 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Lake_E035/air_temp/2024.csv", fileEncoding = "Latin1")
+lake_at_2017 = read.csv("Lake_E035/air_temp/2017.csv", fileEncoding = "Latin1")
+lake_at_2018 = read.csv("Lake_E035/air_temp/2018.csv", fileEncoding = "Latin1")
+lake_at_2021 = read.csv("Lake_E035/air_temp/2021.csv")
+lake_at_2022 = read.csv("Lake_E035/air_temp/2022.csv")
+lake_at_2023 = read.csv("Lake_E035/air_temp/2023.csv", fileEncoding = "Latin1")
+lake_at_2024 = read.csv("Lake_E035/air_temp/2024.csv", fileEncoding = "Latin1")
 
 lake_at_2024 = lake_at_2024 %>% rename(Date =  ï..Date, Temp...C = Temp..Â.C)
 
@@ -215,13 +215,13 @@ lake_at_sub = lake_at_sub %>% drop_na(Year)
 #########################################################################
 ## Warren Creek (E162)
 
-warren_2017 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Warren_E162/2017.csv", fileEncoding = "Latin1")
-warren_2019 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Warren_E162/2019.csv")
-warren_2020 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Warren_E162/2020.csv")
-warren_2021 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Warren_E162/2021.csv")
-warren_2022 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Warren_E162/2022.csv")
-warren_2023 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Warren_E162/2023.csv", fileEncoding = "Latin1")
-warren_2024 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Warren_E162/2024.csv")
+warren_2017 = read.csv("Warren_E162/2017.csv", fileEncoding = "Latin1")
+warren_2019 = read.csv("Warren_E162/2019.csv")
+warren_2020 = read.csv("Warren_E162/2020.csv")
+warren_2021 = read.csv("Warren_E162/2021.csv")
+warren_2022 = read.csv("Warren_E162/2022.csv")
+warren_2023 = read.csv("Warren_E162/2023.csv", fileEncoding = "Latin1")
+warren_2024 = read.csv("Warren_E162/2024.csv")
 
 warren_2023 = warren_2023 %>% rename(Date = ï..Date , Temp...C = Temp..Â.C)
 warren_sub = rbind(warren_2017, warren_2019, warren_2020, warren_2021, warren_2022, warren_2023, warren_2024)
@@ -265,7 +265,7 @@ warren_sub = warren_sub %>% drop_na(Year)
 
 # ## write to drive
 # 
-write.csv(warren_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Processed_temp_data/warren_E162_ast_sub.csv")
+write.csv(warren_sub, "Processed_temp_data/warren_E162_ast_sub.csv")
 
 
 
@@ -274,14 +274,14 @@ write.csv(warren_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Re
 #######################################################
 ## Grouse Creek (E062)
 
-grouse_2017 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Grouse_E062/2017.csv", fileEncoding = "Latin1")
-grouse_2018 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Grouse_E062/2018.csv", fileEncoding = "Latin1")
-grouse_2019 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Grouse_E062/2019.csv")
-grouse_2020 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Grouse_E062/2020.csv")
-grouse_2021 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Grouse_E062/2021.csv")
-grouse_2022 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Grouse_E062/2022.csv")
-grouse_2023 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Grouse_E062/2023.csv", fileEncoding = "Latin1")
-grouse_2024 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Grouse_E062/2024.csv")
+grouse_2017 = read.csv("Grouse_E062/2017.csv", fileEncoding = "Latin1")
+grouse_2018 = read.csv("Grouse_E062/2018.csv", fileEncoding = "Latin1")
+grouse_2019 = read.csv("Grouse_E062/2019.csv")
+grouse_2020 = read.csv("Grouse_E062/2020.csv")
+grouse_2021 = read.csv("Grouse_E062/2021.csv")
+grouse_2022 = read.csv("Grouse_E062/2022.csv")
+grouse_2023 = read.csv("Grouse_E062/2023.csv", fileEncoding = "Latin1")
+grouse_2024 = read.csv("Grouse_E062/2024.csv")
 
 
 grouse_sub= rbind(grouse_2017, grouse_2018, grouse_2019, grouse_2020, grouse_2021, grouse_2022, grouse_2023, grouse_2024)
@@ -326,7 +326,7 @@ grouse_sub = grouse_sub %>% drop_na(Year)
 ############################################
 # ## write to drive
 
-write.csv(grouse_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Processed_temp_data/grouse_E062_ast_sub.csv")
+write.csv(grouse_sub, "Processed_temp_data/grouse_E062_ast_sub.csv")
 
 
 
@@ -338,13 +338,13 @@ write.csv(grouse_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Re
 ## McKorkle (Upper Big Creek) E118
 
 
-mckorkle_2018 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/McCorkle_E118/2018.csv", fileEncoding = "Latin1")
-mckorkle_2019 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/McCorkle_E118/2019.csv")
-mckorkle_2020 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/McCorkle_E118/2020.csv", fileEncoding = "Latin1")
-mckorkle_2021 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/McCorkle_E118/2021.csv")
-mckorkle_2022 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/McCorkle_E118/2022.csv")
-mckorkle_2023 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/McCorkle_E118/2023.csv", fileEncoding = "Latin1")
-mckorkle_2024 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/McCorkle_E118/2024.csv")
+mckorkle_2018 = read.csv("McCorkle_E118/2018.csv", fileEncoding = "Latin1")
+mckorkle_2019 = read.csv("McCorkle_E118/2019.csv")
+mckorkle_2020 = read.csv("McCorkle_E118/2020.csv", fileEncoding = "Latin1")
+mckorkle_2021 = read.csv("McCorkle_E118/2021.csv")
+mckorkle_2022 = read.csv("McCorkle_E118/2022.csv")
+mckorkle_2023 = read.csv("McCorkle_E118/2023.csv", fileEncoding = "Latin1")
+mckorkle_2024 = read.csv("McCorkle_E118/2024.csv")
 
 
 mckorkle_2020= mckorkle_2020%>% rename(Date = ï..Date , Temp...C = Temp..Â.C)
@@ -389,7 +389,7 @@ mckorkle_sub = mckorkle_sub%>% drop_na(Year)
 # 
 # ## write to drive
 # 
-write.csv(mckorkle_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Processed_temp_data/mckorkle_E118_ast_sub.csv")
+write.csv(mckorkle_sub, "Processed_temp_data/mckorkle_E118_ast_sub.csv")
 
 
 
@@ -397,14 +397,14 @@ write.csv(mckorkle_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs 
 ################################################################################
 #### Lake Creek E035
 
-lake_2017 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Lake_E035/2017.csv", fileEncoding = "Latin1")
-lake_2018 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Lake_E035/2018.csv", fileEncoding = "Latin1")
-lake_2019 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Lake_E035/2019.csv")
-lake_2020 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Lake_E035/2020.csv")
-lake_2021 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Lake_E035/2021.csv")
-lake_2022 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Lake_E035/2022.csv")
-lake_2023 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Lake_E035/2023.csv", fileEncoding = "Latin1")
-lake_2024 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Lake_E035/2024.csv")
+lake_2017 = read.csv("Lake_E035/2017.csv", fileEncoding = "Latin1")
+lake_2018 = read.csv("Lake_E035/2018.csv", fileEncoding = "Latin1")
+lake_2019 = read.csv("Lake_E035/2019.csv")
+lake_2020 = read.csv("Lake_E035/2020.csv")
+lake_2021 = read.csv("Lake_E035/2021.csv")
+lake_2022 = read.csv("Lake_E035/2022.csv")
+lake_2023 = read.csv("Lake_E035/2023.csv", fileEncoding = "Latin1")
+lake_2024 = read.csv("Lake_E035/2024.csv")
 
 lake_2023= lake_2023%>% rename(Date = ï..Date , Temp...C = Temp..Â.C)
 
@@ -448,7 +448,7 @@ lake_sub = lake_sub%>% drop_na(Year)
 
 ## write to drive
 
-write.csv(lake_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Processed_temp_data/lake_E035_ast_sub.csv")
+write.csv(lake_sub, "Processed_temp_data/lake_E035_ast_sub.csv")
 
 
 
@@ -457,12 +457,12 @@ write.csv(lake_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Rese
 
 #######  Government E323 (air - E341)
 
-government_2019 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Government_E323/2019.csv")
-government_2020 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Government_E323/2020.csv")
-government_2021 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Government_E323/2021.csv")
-government_2022 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Government_E323/2022.csv")
-government_2023 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Government_E323/2023.csv", fileEncoding = "Latin1")
-government_2024 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Government_E323/2024.csv")
+government_2019 = read.csv("Government_E323/2019.csv")
+government_2020 = read.csv("Government_E323/2020.csv")
+government_2021 = read.csv("Government_E323/2021.csv")
+government_2022 = read.csv("Government_E323/2022.csv")
+government_2023 = read.csv("Government_E323/2023.csv", fileEncoding = "Latin1")
+government_2024 = read.csv("Government_E323/2024.csv")
 
 government_2023= government_2023%>% rename(Date = ï..Date , Temp...C = Temp..Â.C)
 
@@ -508,7 +508,7 @@ government_sub = government_sub %>% drop_na(Year)
 
 # ## write to drive
 
-write.csv(government_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Processed_temp_data/government_E323_ast_sub.csv")
+write.csv(government_sub, "Processed_temp_data/government_E323_ast_sub.csv")
 
 
 
@@ -519,13 +519,13 @@ write.csv(government_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Spring
 #######################################################################
 #######################################################################
 
-smith_2017 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Smith_E208/2017.csv", fileEncoding = "Latin1")
-smith_2018 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Smith_E208/2018.csv", fileEncoding = "Latin1")
-smith_2019 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Smith_E208/2019.csv", fileEncoding = "Latin1")
-smith_2021 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Smith_E208/2021.csv")
-smith_2022 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Smith_E208/2022.csv")
-smith_2023 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Smith_E208/2023.csv", fileEncoding = "Latin1")
-smith_2024 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Smith_E208/2024.csv")
+smith_2017 = read.csv("Smith_E208/2017.csv", fileEncoding = "Latin1")
+smith_2018 = read.csv("Smith_E208/2018.csv", fileEncoding = "Latin1")
+smith_2019 = read.csv("Smith_E208/2019.csv", fileEncoding = "Latin1")
+smith_2021 = read.csv("Smith_E208/2021.csv")
+smith_2022 = read.csv("Smith_E208/2022.csv")
+smith_2023 = read.csv("Smith_E208/2023.csv", fileEncoding = "Latin1")
+smith_2024 = read.csv("Smith_E208/2024.csv")
 
 smith_2023 = smith_2023 %>% rename(Date = ï..Date , Temp...C = Temp..Â.C)
 smith_2019 = smith_2019 %>% rename(Date = ï..Date , Temp...C = Temp..Â.C)
@@ -570,7 +570,7 @@ smith_sub = smith_sub%>% drop_na(Year)
 
 ## write to drive
 
-write.csv(smith_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Processed_temp_data/smith_E208_ast_sub.csv")
+write.csv(smith_sub, "Processed_temp_data/smith_E208_ast_sub.csv")
 
 
 
@@ -580,14 +580,14 @@ write.csv(smith_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Res
 #######################################################################
 #######################################################################
 
-BC_2017 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Logan_E109/2017.csv", fileEncoding = "Latin1")
-BC_2018 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Logan_E109/2018.csv", fileEncoding = "Latin1")
-BC_2019 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Logan_E109/2019.csv", fileEncoding = "Latin1")
-BC_2020 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Logan_E109/2020.csv", fileEncoding = "Latin1")
-BC_2021 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Logan_E109/2021.csv")
-BC_2022 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Logan_E109/2022.csv")
-BC_2023 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Logan_E109/2023.csv", fileEncoding = "Latin1")
-BC_2024 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Logan_E109/2024.csv")
+BC_2017 = read.csv("Logan_E109/2017.csv", fileEncoding = "Latin1")
+BC_2018 = read.csv("Logan_E109/2018.csv", fileEncoding = "Latin1")
+BC_2019 = read.csv("Logan_E109/2019.csv", fileEncoding = "Latin1")
+BC_2020 = read.csv("Logan_E109/2020.csv", fileEncoding = "Latin1")
+BC_2021 = read.csv("Logan_E109/2021.csv")
+BC_2022 = read.csv("Logan_E109/2022.csv")
+BC_2023 = read.csv("Logan_E109/2023.csv", fileEncoding = "Latin1")
+BC_2024 = read.csv("Logan_E109/2024.csv")
 
 
 BC_2020 = BC_2020 %>% rename(Date = ï..Date , Temp...C = Temp..Â.C)
@@ -636,7 +636,7 @@ BC_sub$site_ID = "BC_E109"
 # 
 # ## write to drive
 
-write.csv(BC_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Processed_temp_data/BC_E109_ast_sub.csv")
+write.csv(BC_sub, "Processed_temp_data/BC_E109_ast_sub.csv")
 
 # #########################################################################################
 
@@ -648,13 +648,13 @@ write.csv(BC_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Resear
 #######################################################################
 #######################################################################
 
-cham_2018 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Chamberlain/2018.csv", fileEncoding = "Latin1")
-cham_2019 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Chamberlain/2019.csv")
-cham_2020 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Chamberlain/2020.csv")
-cham_2021 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Chamberlain/2021.csv")
-cham_2022 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Chamberlain/2022.csv")
-cham_2023 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Chamberlain/2023.csv", fileEncoding = "Latin1")
-cham_2024 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Chamberlain/2024.csv")
+cham_2018 = read.csv("Chamberlain/2018.csv", fileEncoding = "Latin1")
+cham_2019 = read.csv("Chamberlain/2019.csv")
+cham_2020 = read.csv("Chamberlain/2020.csv")
+cham_2021 = read.csv("Chamberlain/2021.csv")
+cham_2022 = read.csv("Chamberlain/2022.csv")
+cham_2023 = read.csv("Chamberlain/2023.csv", fileEncoding = "Latin1")
+cham_2024 = read.csv("Chamberlain/2024.csv")
 
 
 chamberlain_sub = rbind(cham_2018, cham_2019, cham_2020, cham_2021, cham_2022, cham_2023, cham_2024)
@@ -696,7 +696,7 @@ chamberlain_sub$site_ID = "chamberlain_E032"
 # 
 # ## write to drive
 
-write.csv(chamberlain_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Processed_temp_data/chamberlain_E032_ast_sub.csv")
+write.csv(chamberlain_sub, "Processed_temp_data/chamberlain_E032_ast_sub.csv")
 
 
 
@@ -706,13 +706,13 @@ write.csv(chamberlain_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Sprin
 #######################################################################
 #######################################################################
 
-LB_upper_2017 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Little_Buckhorn_upper_E017/2017.csv", fileEncoding = "Latin1")
-LB_upper_2018 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Little_Buckhorn_upper_E017/2018.csv", fileEncoding = "Latin1")
-LB_upper_2020 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Little_Buckhorn_upper_E017/2020.csv", fileEncoding = "Latin1")
-LB_upper_2021 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Little_Buckhorn_upper_E017/2021.csv")
-LB_upper_2022 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Little_Buckhorn_upper_E017/2022.csv")
-LB_upper_2023 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Little_Buckhorn_upper_E017/2023.csv", fileEncoding = "Latin1")
-LB_upper_2024 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Little_Buckhorn_upper_E017/2024.csv")
+LB_upper_2017 = read.csv("Little_Buckhorn_upper_E017/2017.csv", fileEncoding = "Latin1")
+LB_upper_2018 = read.csv("Little_Buckhorn_upper_E017/2018.csv", fileEncoding = "Latin1")
+LB_upper_2020 = read.csv("Little_Buckhorn_upper_E017/2020.csv", fileEncoding = "Latin1")
+LB_upper_2021 = read.csv("Little_Buckhorn_upper_E017/2021.csv")
+LB_upper_2022 = read.csv("Little_Buckhorn_upper_E017/2022.csv")
+LB_upper_2023 = read.csv("Little_Buckhorn_upper_E017/2023.csv", fileEncoding = "Latin1")
+LB_upper_2024 = read.csv("Little_Buckhorn_upper_E017/2024.csv")
 
 
 LB_upper_2020 = LB_upper_2020 %>% rename(Date = ï..Date , Temp...C = Temp..Â.C)
@@ -758,7 +758,7 @@ LB_upper_sub$site_ID = "LB_upper_E017"
 # 
 # ## write to drive
 
-write.csv(LB_upper_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Processed_temp_data/LB_upper_E017_ast_sub.csv")
+write.csv(LB_upper_sub, "Processed_temp_data/LB_upper_E017_ast_sub.csv")
 
 
 
@@ -769,14 +769,14 @@ write.csv(LB_upper_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs 
 #######################################################################
 #######################################################################
 
-LB_lower_2017 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Little_Buckhorn_lower_E126/2017.csv", fileEncoding = "Latin1")
-LB_lower_2018 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Little_Buckhorn_lower_E126/2018.csv", fileEncoding = "Latin1")
-LB_lower_2019 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Little_Buckhorn_lower_E126/2019.csv", fileEncoding = "Latin1")
-LB_lower_2020 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Little_Buckhorn_lower_E126/2020.csv", fileEncoding = "Latin1")
-LB_lower_2021 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Little_Buckhorn_lower_E126/2021.csv")
-LB_lower_2022 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Little_Buckhorn_lower_E126/2022.csv")
-LB_lower_2023 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Little_Buckhorn_lower_E126/2023.csv", fileEncoding = "Latin1")
-LB_lower_2024 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Little_Buckhorn_lower_E126/2024.csv")
+LB_lower_2017 = read.csv("Little_Buckhorn_lower_E126/2017.csv", fileEncoding = "Latin1")
+LB_lower_2018 = read.csv("Little_Buckhorn_lower_E126/2018.csv", fileEncoding = "Latin1")
+LB_lower_2019 = read.csv("Little_Buckhorn_lower_E126/2019.csv", fileEncoding = "Latin1")
+LB_lower_2020 = read.csv("Little_Buckhorn_lower_E126/2020.csv", fileEncoding = "Latin1")
+LB_lower_2021 = read.csv("Little_Buckhorn_lower_E126/2021.csv")
+LB_lower_2022 = read.csv("Little_Buckhorn_lower_E126/2022.csv")
+LB_lower_2023 = read.csv("Little_Buckhorn_lower_E126/2023.csv", fileEncoding = "Latin1")
+LB_lower_2024 = read.csv("Little_Buckhorn_lower_E126/2024.csv")
 
 
 LB_lower_2017 = LB_lower_2017 %>% rename(Temp...C = Temp..øC)
@@ -822,7 +822,7 @@ LB_lower_sub$site_ID = "LB_lower_E126"
 # 
 # ## write to drive
 
-write.csv(LB_lower_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Processed_temp_data/LB_lower_E126_ast_sub.csv")
+write.csv(LB_lower_sub, "Processed_temp_data/LB_lower_E126_ast_sub.csv")
 
 ggplot(LB_lower_sub, aes(DOY, StreamTempC, color = factor(Year)))+geom_smooth()
 
@@ -834,12 +834,12 @@ ggplot(LB_lower_sub, aes(DOY, StreamTempC, color = factor(Year)))+geom_smooth()
 #######################################################################
 
 
-buckhorn_2018 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Buckhorn_E016/2018.csv", fileEncoding = "Latin1")
-buckhorn_2020 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Buckhorn_E016/2020.csv", fileEncoding = "Latin1")
-buckhorn_2021 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Buckhorn_E016/2021.csv")
-buckhorn_2022 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Buckhorn_E016/2022.csv")
-buckhorn_2023 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Buckhorn_E016/2023.csv", fileEncoding = "Latin1")
-buckhorn_2024 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Buckhorn_E016/2024.csv")
+buckhorn_2018 = read.csv("Buckhorn_E016/2018.csv", fileEncoding = "Latin1")
+buckhorn_2020 = read.csv("Buckhorn_E016/2020.csv", fileEncoding = "Latin1")
+buckhorn_2021 = read.csv("Buckhorn_E016/2021.csv")
+buckhorn_2022 = read.csv("Buckhorn_E016/2022.csv")
+buckhorn_2023 = read.csv("Buckhorn_E016/2023.csv", fileEncoding = "Latin1")
+buckhorn_2024 = read.csv("Buckhorn_E016/2024.csv")
 
 
 
@@ -885,7 +885,7 @@ buckhorn_sub$site_ID = "buckhorn_E016"
 # 
 # ## write to drive
 
-write.csv(buckhorn_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Processed_temp_data/buckhorn_E016_ast_sub.csv")
+write.csv(buckhorn_sub, "Processed_temp_data/buckhorn_E016_ast_sub.csv")
 
 
 
@@ -895,14 +895,14 @@ write.csv(buckhorn_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs 
 #######################################################################
 #######################################################################
 
-logan_2017 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/logan_E123/2017.csv", fileEncoding = "Latin1")
-logan_2018 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/logan_E123/2018.csv", fileEncoding = "Latin1")
-logan_2019 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/logan_E123/2019.csv", fileEncoding = "Latin1")
-logan_2020 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/logan_E123/2020.csv", fileEncoding = "Latin1")
-logan_2021 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/logan_E123/2021.csv")
-logan_2022 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/logan_E123/2022.csv")
-logan_2023 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/logan_E123/2023.csv", fileEncoding = "Latin1")
-logan_2024 = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/logan_E123/2024.csv")
+logan_2017 = read.csv("logan_E123/2017.csv", fileEncoding = "Latin1")
+logan_2018 = read.csv("logan_E123/2018.csv", fileEncoding = "Latin1")
+logan_2019 = read.csv("logan_E123/2019.csv", fileEncoding = "Latin1")
+logan_2020 = read.csv("logan_E123/2020.csv", fileEncoding = "Latin1")
+logan_2021 = read.csv("logan_E123/2021.csv")
+logan_2022 = read.csv("logan_E123/2022.csv")
+logan_2023 = read.csv("logan_E123/2023.csv", fileEncoding = "Latin1")
+logan_2024 = read.csv("logan_E123/2024.csv")
 
 
 logan_2020 = logan_2020 %>% rename(Date = ï..Date , Temp...C = Temp..Â.C)
@@ -951,7 +951,7 @@ logan_sub$site_ID = "logan_E123"
 # 
 # ## write to drive
 
-write.csv(logan_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Processed_temp_data/logan_E123_ast_sub.csv")
+write.csv(logan_sub, "Processed_temp_data/logan_E123_ast_sub.csv")
 
 
 ##############################################################################
@@ -979,7 +979,7 @@ View(duplicates)
 
 head(all_temp_sub)
 
-write.csv(all_temp_sub, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Temp_Data/PNF/Processed_temp_data/ALL_SITES_AST_sub.csv")
+write.csv(all_temp_sub, "Processed_temp_data/ALL_SITES_AST_sub.csv")
 
 
 
