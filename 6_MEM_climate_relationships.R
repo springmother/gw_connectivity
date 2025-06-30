@@ -12,7 +12,7 @@ library(effectsize)
 
 
 # load file if not already loaded
-seasonal_diurnal_trends = read.csv( "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/CSVs/seasonal_diurnal_trends.csv")
+seasonal_diurnal_trends = read.csv( "CSVs/seasonal_diurnal_trends.csv")
  
 
 seasonal_diurnal_trends$year = as.character(seasonal_diurnal_trends$year)
@@ -56,7 +56,7 @@ annual_climate$year = as.character(annual_climate$year)
  
  
 ## write to drive 
- write.csv(seasonal_diurnal_trends, "C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/CSVs/seasonal_diurnal_trends.csv")
+ write.csv(seasonal_diurnal_trends, "CSVs/seasonal_diurnal_trends.csv")
 
 
 
