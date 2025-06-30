@@ -6,7 +6,7 @@
 
 library(RCurl)
 
-ftp_url <- "ftp://gliston.cira.colostate.edu/grace_project/100m_daily/"
+ftp_url <- "ftp://...."
 
 # List files in the FTP directory (anonymous login)
 filenames <- getURL(ftp_url, dirlistonly = TRUE)
@@ -26,7 +26,7 @@ download_dir = "D:/PhD/SnowModel/"
 data = getBinaryURL(ftp_url)
 
 
-ftp_base <- "ftp://gliston.cira.colostate.edu/grace_project/100m_daily/"
+ftp_base <- "ftp://..."
 urls <- paste0(ftp_base, filenames)
 
 dest_paths <- file.path("D:/PhD/SnowModel/", filenames)
@@ -59,7 +59,7 @@ library(zoo)
 ### Import watershed shapefiles
 ############################
 
-all_watersheds= vect("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/Basin_shapefiles/all_watersheds.shp")
+all_watersheds= vect("Basin_shapefiles/all_watersheds.shp")
 str(all_watersheds)
 plot(all_watersheds)
 crs(all_watersheds)
@@ -223,9 +223,9 @@ calculate_dowy <- function(date) {
 Snowmelt_runoff$doy_wy <- sapply(Snowmelt_runoff$date, calculate_dowy)
 
 
-# save to external drive and OneDrive
+# save to drive
 write.csv(Snowmelt_runoff,"D:/PhD/SnowModel/Snowmelt_runoff_ts.csv")
-write.csv(Snowmelt_runoff,"C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/CSVs/Snowmelt_runoff_ts.csv")
+
 
 
 #########################################################
@@ -306,9 +306,8 @@ snowmelt_annual = unique(snowmelt_annual)
 
 
 
-# save to external drive and OneDrive
+# save to drive
 write.csv(snowmelt_annual,"D:/PhD/SnowModel/snowmelt_annual.csv")
-write.csv(snowmelt_annual,"C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/CSVs/snowmelt_annual.csv")
 
 
 
