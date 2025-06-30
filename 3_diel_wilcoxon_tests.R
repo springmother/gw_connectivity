@@ -15,9 +15,9 @@ library(gridExtra)
 
 
 
-diurnal_dynamic_metrics = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/CSVs/diurnal_dynamic_metrics.csv")
+diurnal_dynamic_metrics = read.csv("CSVs/diurnal_dynamic_metrics.csv")
 
-diurnal_ts_metrics = read.csv("C:/Users/gpeven/OneDrive - University of Idaho/Springs Research/Data/Stream_Temp/CSVs/diurnal_ts_metrics.csv")
+diurnal_ts_metrics = read.csv("CSVs/diurnal_ts_metrics.csv")
 
 
 
